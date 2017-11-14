@@ -1,9 +1,9 @@
-body{
+body {
 	@include montserratRegular;
-	font-size: 12px;
 	box-sizing: border-box;
 	color: $dkGrey;
-	h1{
+	font-size: 12px;
+	h1 {
 		@include montserratBold;
 		color: $dkGrey;
 		font-size: 22px;
@@ -20,44 +20,44 @@ body{
 			font-size: 50px;
 		}
 	}
-	h2{
+	h2 {
 		color: $ltGrey;
 		font-size: 14px;
 		@media (min-width: $lg) {
-			font-size: 18px;
 			margin: 8px 0 0;
+			font-size: 18px;
 		}
 		@media (min-width: $xl) {
 			font-size: 25px;
 		}
 	}
-	h3{
+	h3 {
 		@include montserratBold;
-		color: $dkGrey;
-		font-size: 16px;
 		position: relative;
 		margin: 0 0 40px;
+		color: $dkGrey;
+		font-size: 16px;
 		@media (min-width: $md) {
 			font-size: 20px;
 		}
 		@media (min-width: $lg) {
 			font-size: 24px;
 		}
-		&:after{
-			content: "";
-			height: 2px;
-			width: 40px;
-			background-color: $dkGrey;
+		&:after {
+			content: '';
 			position: absolute;
 			bottom: -20px;
-			left: 0; 
+			left: 0;
+			width: 40px;
+			height: 2px;
+			background-color: $dkGrey;
 		}
 	}
-	h4{
+	h4 {
 		@include montserratSemiBold;
+		margin: 0 0 7px;
 		color: $dkGrey;
 		font-size: 13px;
-		margin: 0 0 7px;
 		@media (min-width: $md) {
 			font-size: 14px;
 		}
@@ -65,28 +65,28 @@ body{
 			font-size: 15px;
 		}
 	}
-	p{
+	p {
 		color: $ltGrey;
-		line-height: 1.5;
 		font-size: 13px;
+		line-height: 1.5;
 		@media (min-width: $md) {
-			font-size: 14px
+			font-size: 14px;
 		}
 		@media (min-width: $lg) {
-			font-size: 15px
+			font-size: 15px;
 		}
 	}
-	a{
-		text-decoration: none;
-		color: $ltGrey;
+	a {
 		border-bottom: 1px solid $ltGrey;
-		text-shadow:  1px 1px white;
+		color: $ltGrey;
+		text-decoration: none;
+		text-shadow: 1px 1px white;
 	}
-	.wrapper{
-		max-width: 1200px;
-		width: 100%;
-		margin: 0 auto;
+	.wrapper {
 		box-sizing: inherit;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
 		padding: 0 25px;
 		@media (min-width: $sm) {
 			padding: 0 40px;
@@ -97,186 +97,201 @@ body{
 		@media (min-width: $lg) {
 			padding: 0 90px;
 		}
-		header{
-			border-bottom: 3px solid $dkGrey; 
+		header {
 			width: 100%;
 			padding: 20px 0 10px;
+			border-bottom: 3px solid $dkGrey;
 			@media (min-width: $lg) {
 				margin: 0 0 40px 0;
 				padding: 50px 0 40px;
 			}
 		}
-		.column-parent{
+		.column-parent {
 			display: flex;
 			flex-direction: column;
+			flex-wrap: wrap;
 			@media (min-width: $lg) {
 				display: block;
 			}
-			section{
+			section {
 				margin: 30px 0;
 				@media (min-width: $lg) {
 					margin: 0 0 30px;
 				}
-				&.left{
+				&.left 	{
 					width: 100%;
 					@media (min-width: $lg) {
-						float: left;
-						// float: none;
-						width: calc(45% - 30px);
-						margin: 0 25px 40px 0;						
-					}
-					@media (min-width: $xl) {
 						width: calc(40% - 30px);
+						margin: 0 25px 40px 0;
 					}
 				}
-				&.right{
+				&.right {
 					width: 100%;
 					@media (min-width: $lg) {
+						width: 60%;
 						float: right;
-						width: 55%;						
-					}
-					@media (min-width: $xl) {
-						width: 60%;	
 					}
 				}
-
-				&.profile{
+				&.profile {
 					order: 1;
-					@media (min-width: $lg) {}
-					p{
+					p {
 						margin: 0 0 15px;
-						&:last-child{
+						&:last-child {
 							margin: 0;
 						}
 					}
 				}
-				&.skills{
+				&.skills {
 					order: 2;
-					@media (min-width: $lg) {}
-					ul{
-						li{
-							display: inline-block;
+					ul {
+						li {
 							position: relative;
+							display: inline-block;
+							margin: 0 20px 0 0;
 							font-size: 13px;
 							line-height: 1.5;
-							margin: 0 20px 0 0;
 							@media (min-width: $md) {
-								font-size: 14px
+								font-size: 14px;
 							}
 							@media (min-width: $lg) {
-								font-size: 15px
+								font-size: 15px;
 							}
-							&:after{
-								content: "";
-								height: 6px;
+							&:after {
+								content: '';
+								position: absolute;
+								top: calc(50% - 3px);
+								right: -14px;
 								width: 6px;
+								height: 6px;
 								border-radius: 50%;
 								background-color: $ltGrey;
-								position: absolute;
-								right: -14px;
-								top: calc(50% - 3px);
 							}
-							&:last-child{
+							&:last-child {
 								margin: 0;
-								&:after{
-									content: "";
-									height: 0;
+								&:after {
+									content: '';
 									width: 0;
+									height: 0;
 								}
 							}
 						}
 					}
 				}
-				&.contact{
+				&.contact {
 					order: 5;
-					@media (min-width: $lg) {}
-					ul{
+					ul {
 						width: 100%;
-						li{
+						li {
 							display: block;
 							width: 50%;
 							margin: 5px 0;
 							font-size: 10px;
 							@media (min-width: $md) {
-								font-size: 12px
+								font-size: 12px;
 							}
 							@media (min-width: $lg) {
 								width: auto;
-								font-size: 13px;
 								margin: 15px 0;
+								font-size: 13px;
 							}
-							&:nth-child(1){
+							&:nth-child(1) {
 								float: left;
 								@media (min-width: $lg) {
 									float: none;
 								}
 							}
-							&:nth-child(2){
+							&:nth-child(2) {
 								float: left;
 								@media (min-width: $lg) {
 									float: none;
 								}
 							}
-							&:nth-child(3){
+							&:nth-child(3) {
 								float: right;
 								@media (min-width: $lg) {
 									float: none;
 								}
-								a{
+								a {
 									&:nth-child(1) {
 										@include bullets;
 									}
 								}
 							}
-							&:nth-child(4){
+							&:nth-child(4) {
 								float: right;
 								@media (min-width: $lg) {
 									float: none;
 								}
 							}
-							span{
+							span {
 								@include montserratSemiBold;
 								display: block;
 								font-size: 12px;
 							}
-							a{
+							a {
 								line-height: 1.3;
 							}
 						}
 					}
 				}
-				&.experience{
+				&.experience {
 					order: 3;
-					article{
+					article {
 						margin: 30px 0;
 						@media (min-width: $lg) {
 							margin: 30px 0 60px;
 						}
-						&:last-child{
+						&:last-child {
 							margin: 30px 0 0;
 							@media (min-width: $lg) {
 								margin: 30px 0 10px;
 							}
 						}
-						p{
-							&:nth-child(2){
+						p {
+							&:nth-child(2) {
+								margin: 0 0 5px;
 								color: $dkGrey;
 								line-height: 1.1;
-								margin: 0 0 5px;
-								span{
+								span {
 									@media (min-width: $lg) {
 										display: block;
 									}
 								}
 							}
 						}
+						.awards {
+							margin-top: 10px;
+							color: $dkGrey;
+						}
+						ul {
+							li {
+								@include bullets;
+								position: relative;
+								display: block;
+								margin: 0 0 0 10px;
+								a {
+									color: $ltGrey;
+									font-size: 13px;
+									line-height: 1.5;
+									@media (min-width: $md) {
+										font-size: 14px;
+									}
+									@media (min-width: $lg) {
+										font-size: 15px;
+									}
+								}
+								&:after{
+									left: -10px;
+									right: auto;
+								}
+							}
+						}
 					}
 				}
-				&.education{
+				&.education {
 					order: 4;
-					@media (min-width: $lg) {}
 				}
-				article{
+				article {
 					margin: 10px 0;
 				}
 			}
